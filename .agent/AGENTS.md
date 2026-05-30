@@ -9,6 +9,20 @@ This profile adapts Superpowers workflows for Antigravity with strict single-flo
 3. Track checklist progress in `<project-root>/docs/plans/task.md` (table-only live tracker).
 4. Follow strict single-flow execution and verify all changes before completion.
 
+## Spec-Driven Development (SDD) Workflow
+
+### Workflow Phases
+Ideate → Define → Sketch → Plan → Build → Compound
+
+| Phase | Skill | 산출물 |
+|---|---|---|
+| Ideate | `idea-refine` | `artifacts/<feature>/idea.md` (선택) |
+| Specify | `write-spec` | `artifacts/<feature>/spec.md` |
+| Sketch | `sketch-wireframe` | `artifacts/<feature>/wireframe.html` |
+| Plan | `draft-plan` | `artifacts/<feature>/plan.md` |
+| Build | `execute-plan` | `artifacts/<feature>/learnings.md` |
+| Compound | `compound` | — |
+
 ## Development Workflow
 
 - Package Manager: `bun`
