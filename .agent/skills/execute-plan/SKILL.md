@@ -1,6 +1,6 @@
 ---
 name: execute-plan
-description: plan.md의 Task를 메인 컨텍스트에서 직접 구현한다. `artifacts/<feature>/plan.md`가 확정돼 각 Task를 실제로 실행할 준비가 된 상태에서 트리거한다 — 사용자가 "이제 구현 시작", "플랜 실행" 같은 신호를 보낼 때. CLAUDE.md → Testing의 TDD 규율을 따르고, 각 Task를 한 커밋으로 구현한 뒤 `code-reviewer` 피드백과 사용자 리뷰를 받는다. plan.md 없이 바로 구현하려는 경우에는 쓰지 않는다. "/execute-plan", "플랜 실행", "구현 시작"으로도 호출한다.
+description: plan.md의 Task를 메인 컨텍스트에서 직접 구현한다. `artifacts/<feature>/plan.md`가 확정돼 각 Task를 실제로 실행할 준비가 된 상태에서 트리거한다 — 사용자가 "이제 구현 시작", "플랜 실행" 같은 신호를 보낼 때. .agent/AGENTS.md → Testing & Verification의 TDD 규율을 따르고, 각 Task를 한 커밋으로 구현한 뒤 `code-reviewer` 피드백과 사용자 리뷰를 받는다. plan.md 없이 바로 구현하려는 경우에는 쓰지 않는다. "/execute-plan", "플랜 실행", "구현 시작"으로도 호출한다.
 argument-hint: "feature name"
 ---
 
@@ -41,7 +41,7 @@ plan.md의 Task 목록을 분석한다.
 Step 2의 순서대로 Task를 한 번에 하나씩 구현한다. 각 Task에 대해:
 
 1. 수용 기준을 읽는다
-2. **수용 기준이 코드로 표현 가능한 부분에 TDD (RED → GREEN)를 적용한다** — UI 시각 검증·디자인 판단 같은 부분은 제외. `CLAUDE.md` → Testing 규율을 따른다.
+2. **수용 기준이 코드로 표현 가능한 부분에 TDD (RED → GREEN)를 적용한다** — UI 시각 검증·디자인 판단 같은 부분은 제외. `.agent/AGENTS.md` → Testing & Verification 규율을 따른다.
 3. 기준을 충족하는 최소 코드를 구현한다
 4. `bun run build`와 영향받은 테스트를 실행한다
 5. Task당 conventional commit 하나를 만든다
@@ -104,7 +104,7 @@ Compound Engineering 정신: 이번 feature가 다음 feature를 더 쉽게 만�
 
 #### 즉시 승격 vs 메모
 
-- **명확한 인사이트** (재발 가능성 높음, 일반화 가능) → 사용자 승인 후 즉시 `.claude/rules/<name>.md` 또는 `CLAUDE.md`에 반영. learnings.md에는 `applied: rule`로 기록.
+- **명확한 인사이트** (재발 가능성 높음, 일반화 가능) → 사용자 승인 후 즉시 `.agent/rules/<name>.md` 또는 `.agent/AGENTS.md`에 반영. learnings.md에는 `applied: rule`로 기록.
 - **약한 신호** (재발 가능성 모호) → learnings.md에 `applied: not-yet`로 메모만. 여러 feature 누적 후 `/compound`가 회고로 분석.
 
 판단 가이드:

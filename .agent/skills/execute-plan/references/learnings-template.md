@@ -2,7 +2,7 @@
 
 구현 중 내린 판단·실수·발견을 `artifacts/<feature>/learnings.md`에 기록한다.
 
-이 파일의 목적은 **같은 일을 다음에 더 쉽게 만드는 것**이다 — Compound Engineering 정신. 명확한 인사이트는 `/execute-plan` Step 6에서 즉시 원칙(`.claude/rules/` 또는 `CLAUDE.md`)으로 승격하고, 여기엔 약한 신호만 메모로 남긴다. `/compound`가 여러 feature 누적된 메모를 분석한다.
+이 파일의 목적은 **같은 일을 다음에 더 쉽게 만드는 것**이다 — Compound Engineering 정신. 명확한 인사이트는 `/execute-plan` Step 6에서 즉시 원칙(`.agent/rules/` 또는 `.agent/AGENTS.md`)으로 승격하고, 여기엔 약한 신호만 메모로 남긴다. `/compound`가 여러 feature 누적된 메모를 분석한다.
 
 **기록 기준**: 모든 판단을 기록하지 않는다. 잘 풀린 일은 생략하고, **예상과 달랐던 것·우회했던 것·다시 마주치고 싶지 않은 것**만 남긴다.
 

@@ -1,17 +1,17 @@
 ---
 name: compound
-description: 여러 feature에 누적된 learnings.md의 약한 신호를 패턴으로 묶어 Skill·Hook·Rule·CLAUDE.md 변경을 제안한다. feature를 3-5개 완료해 `artifacts/*/learnings.md`가 여럿 쌓였을 때, 또는 여러 feature에서 같은 함정에 반복해 빠졌다고 느낄 때 트리거한다. 단일 feature 진행 중에는 쓰지 않는다 — learnings가 축적되기 전에는 신호가 약하다 (즉시 승격은 /execute-plan Step 6이 담당). "/compound", "원칙 갱신", "회고"로도 호출한다.
+description: 여러 feature에 누적된 learnings.md의 약한 신호를 패턴으로 묶어 Skill·Hook·Rule·AGENTS.md 변경을 제안한다. feature를 3-5개 완료해 `artifacts/*/learnings.md`가 여럿 쌓였을 때, 또는 여러 feature에서 같은 함정에 반복해 빠졌다고 느낄 때 트리거한다. 단일 feature 진행 중에는 쓰지 않는다 — learnings가 축적되기 전에는 신호가 약하다 (즉시 승격은 /execute-plan Step 6이 담당). "/compound", "원칙 갱신", "회고"로도 호출한다.
 ---
 
 # Compound — 누적 회고
 
-여러 feature에 누적된 약한 신호의 패턴을 찾아 원칙(Skill·Hook·Rule·CLAUDE.md)으로 승격할 후보를 제안한다. `/execute-plan` Step 6이 명확한 인사이트를 이미 즉시 승격하므로, 이 스킬은 그 시점엔 약했지만 누적되면 강해지는 신호를 다룬다.
+여러 feature에 누적된 약한 신호의 패턴을 찾아 원칙(Skill·Hook·Rule·AGENTS.md)으로 승격할 후보를 제안한다. `/execute-plan` Step 6이 명확한 인사이트를 이미 즉시 승격하므로, 이 스킬은 그 시점엔 약했지만 누적되면 강해지는 신호를 다룬다.
 
 ## Inputs / Outputs
 
 | 입력 | 출력 |
 |---|---|
-| 모든 `artifacts/*/learnings.md` (특히 `applied: not-yet` 항목) | 사용자 승인을 거친 Skill·Hook·Rule·CLAUDE.md 변경 |
+| 모든 `artifacts/*/learnings.md` (특히 `applied: not-yet` 항목) | 사용자 승인을 거친 Skill·Hook·Rule·AGENTS.md 변경 |
 
 ## Workflow
 
@@ -36,7 +36,7 @@ description: 여러 feature에 누적된 learnings.md의 약한 신호를 패턴
 | 같은 제약 위반이 반복됨 | **Rule** | `.tsx에서 px 단위 금지`, `components/ui/* 직접 수정 금지` |
 | 100% 기계적으로 잡아야 하는 것 | **Hook** | 커밋 전 `bun run build`, 저장 후 linter 자동 실행 |
 | 잘못된 사용 패턴 — 올바른 방법을 가르쳐야 함 | **Skill** | shadcn 컴포넌트 설치·조합법, 특정 라이브러리 도입 가이드 |
-| 아키텍처 결정 변경 | **CLAUDE.md** | 순방향 의존성 순서, 패키지 매니저 결정 |
+| 아키텍처 결정 변경 | **AGENTS.md** | 순방향 의존성 순서, 패키지 매니저 결정 |
 
 새 Skill은 라이브러리·도구 단위로 제안한다 — 더 작은 단위로 쪼개면 Skill이 누적되어 검색·관리 비용이 커지고, 더 큰 단위(phase 전체)로 묶으면 description으로 트리거하기 어렵다. 새 skill을 실제로 만들 땐 `skill-creator` 스킬을 쓴다. 상세 주제는 `references/`로 분리.
 
@@ -51,9 +51,10 @@ description: 여러 feature에 누적된 learnings.md의 약한 신호를 패턴
 
 | 메커니즘 | 위치 |
 |---|---|
-| Rule | `.claude/rules/<name>.md` |
-| Hook | `.claude/settings.json` — `hooks` 섹션 |
-| Skill | `.claude/skills/<name>/SKILL.md` |
-| CLAUDE.md | 프로젝트 루트의 `CLAUDE.md` |
+| Rule | `.agent/rules/<name>.md` |
+| Hook | `hooks.json` — `hooks` 섹션 |
+| Skill | `.agent/skills/<name>/SKILL.md` |
+| AGENTS.md | `.agent/AGENTS.md` |
 
 사용자가 승인한 것만 적용한다. 적용 후 해당 learnings.md 항목의 `applied`를 `rule`로 갱신한다.
+

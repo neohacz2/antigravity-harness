@@ -54,9 +54,9 @@ Claude Code hooks 기반 자동 품질 게이트 (`.claude/settings.json`)
 | `*.test.tsx` / `*.test.ts` | 단위·통합·수용 기준 테스트 (Vitest, colocated) |
 | `*.spec.ts` | E2E 테스트 (Playwright, `e2e/`) |
 
-자세한 테스팅 원칙과 Stack은 [CLAUDE.md → Testing](./CLAUDE.md#testing)을 참조합니다.
+자세한 테스팅 원칙과 Stack은 [.agent/AGENTS.md → Testing & Verification](.agent/AGENTS.md#testing--verification)을 참조합니다.
 
-## Claude Code 워크플로우
+## Antigravity 워크플로우
 
 ```mermaid
 flowchart LR
@@ -93,4 +93,4 @@ Team Lead로서 plan.md의 Task를 한 번에 하나씩 직접 구현합니다. 
 
 ### 6. Compound (`/compound`)
 
-`decisions.md`에 누적된 판단을 읽어 반복된 패턴을 감지하고, Skill/Hook/Rule/CLAUDE.md로 승격할 후보를 제안합니다. 사용자 승인(Ask-first) 후에만 적용합니다.
+`decisions.md`에 누적된 판단을 읽어 반복된 패턴을 감지하고, Skill/Hook/Rule/AGENTS.md로 승격할 후보를 제안합니다. 사용자 승인(Ask-first) 후에만 적용합니다.
