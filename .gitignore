@@ -50,6 +50,8 @@ next-env.d.ts
 
 # worktree
 .claude/worktrees
+.agent/worktrees/
 
-# agent
+# agent tracker & private files
 .agents/
+/docs/plans/task.md
