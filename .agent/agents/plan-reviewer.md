@@ -34,7 +34,7 @@ spec.md의 모든 시나리오와 각 시나리오의 모든 성공 기준 항�
 
 ### 2. Wireframe Consistency (wireframe이 있을 때)
 
-wireframe.html이 없으면 이 차원을 건너뜬다.
+wireframe.html이 없으면 이 차원을 건너뛴다.
 
 wireframe.html의 각 화면에서 사용된 컴포넌트 패턴을 식별하고, plan의 Task 설명에 구체 컴포넌트 유형으로 명시되어 있는지 확인한다. wireframe에는 있지만 plan에는 언급되지 않은 컴포넌트를 보고한다.
 

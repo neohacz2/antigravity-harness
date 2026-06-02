@@ -9,7 +9,7 @@ globs:
 
 ## 규칙
 
-tsx/jsx 파일 작성 시 `.claude/skills/shadcn/rules/` 디렉토리의 규칙 파일을 읽고 준수한다.
+tsx/jsx 파일 작성 시 `.agent/skills/shadcn/rules/` 디렉토리의 규칙 파일을 읽고 준수한다.
 
 ## 절대 금지
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 # PostToolUse hook (Write|Edit): ESLint auto-fix
-# exit 0 = continue, exit 2 = claude sees stderr and retries, exit 1 = hard failure
+# exit 0 = continue, exit 2 = agent sees stderr and retries, exit 1 = hard failure
 
 set -eo pipefail
 

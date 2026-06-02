@@ -1,6 +1,10 @@
 # Harness Engineering Template
 
-Next.js 16 + React 19 프로젝트 템플릿
+[![Agentic Hunt](https://img.shields.io/badge/Agentic_Hunt-강의-000000)](https://www.agentic-hunt.com)
+[![Docs](https://img.shields.io/badge/docs-agentic--hunt-2563eb)](https://docs.agentic-hunt.com)
+
+> [Agentic Hunt](https://www.agentic-hunt.com) 강의용 Next.js 16 + React 19 템플릿.
+> 사용법과 워크플로우 문서는 [docs.agentic-hunt.com](https://docs.agentic-hunt.com)에서 확인하세요.
 
 ## 기술 스택
 
@@ -40,7 +44,7 @@ bunx playwright install chromium
 
 ## Hooks
 
-Claude Code hooks 기반 자동 품질 게이트 (`.claude/settings.json`)
+Antigravity hooks 기반 자동 품질 게이트 (`hooks.json`)
 
 | 단계 | 트리거 | 동작 |
 |---|---|---|

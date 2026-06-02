@@ -35,7 +35,7 @@ plan을 쓰기 전에 이미 존재하는 맥락을 코드와 스킬 두 축에�
 
 #### 스킬
 
-`.claude/skills/`를 스캔해 이 feature와 조금이라도 관련 있는 스킬을 모두 고른다 — 애매하면 포함한다. 빠진 스킬 때문에 plan이 프로젝트 규약과 어긋나는 쪽이 넘치는 쪽보다 비용이 크다.
+`.agent/skills/`를 스캔해 이 feature와 조금이라도 관련 있는 스킬을 모두 고른다 — 애매하면 포함한다. 빠진 스킬 때문에 plan이 프로젝트 규약과 어긋나는 쪽이 넘치는 쪽보다 비용이 크다.
 
 ### Step 3. 빈칸 채우기
 
@@ -103,7 +103,7 @@ NG: "할 일 생성·수정·삭제 + 알림" — 10+ 파일, 두 서브시스�
 |---|---|
 | 코드 (DOM, 함수, DB, HTTP) | Vitest / `bun run build` |
 | 실제 브라우저, CI에서 반복 가능 | Playwright (`bun run test:e2e`) |
-| 실제 브라우저, 일회성 증거 | Browser MCP (`mcp__claude-in-chrome__*`) |
+| 실제 브라우저, 일회성 증거 | Browser MCP (`mcp__agent-in-chrome__*`) |
 | 자동화 불가능 (디자인 판단, 스크린 리더 AT, cross-browser 느낌, 도구에 없는 성능 임계값) | Human review — 리뷰어·역할·산출물·기준 명시. 증거는 `artifacts/<feature>/evidence/`에 저장 |
 
 #### Ordering

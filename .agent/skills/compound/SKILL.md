@@ -57,4 +57,3 @@ description: 여러 feature에 누적된 learnings.md의 약한 신호를 패턴
 | AGENTS.md | `.agent/AGENTS.md` |
 
 사용자가 승인한 것만 적용한다. 적용 후 해당 learnings.md 항목의 `applied`를 `rule`로 갱신한다.
-

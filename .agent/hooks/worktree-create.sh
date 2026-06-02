@@ -5,7 +5,7 @@ set -e
 INPUT=$(cat)
 NAME=$(echo "$INPUT" | jq -r '.name')
 PROJECT_ROOT="$(git rev-parse --show-toplevel)"
-WORKTREE_PATH="$PROJECT_ROOT/.claude/worktrees/$NAME"
+WORKTREE_PATH="$PROJECT_ROOT/.agent/worktrees/$NAME"
 
 # 이미 worktree가 존재하면 경로만 반환
 if [ -d "$WORKTREE_PATH" ]; then
@@ -33,7 +33,7 @@ fi
 # Copy only gitignored .env files (tracked ones already exist in worktree)
 find "$PROJECT_ROOT" -maxdepth 2 -name '.env*' -type f \
   -not -path '*/node_modules/*' \
-  -not -path '*/.claude/*' | while read -r f; do
+  -not -path '*/.agent/*' | while read -r f; do
   rel="${f#$PROJECT_ROOT/}"
   git -C "$PROJECT_ROOT" check-ignore -q "$rel" 2>/dev/null || continue
   target="$WORKTREE_PATH/$rel"
@@ -45,5 +45,5 @@ done
 echo "Running bun install..." >&2
 (cd "$WORKTREE_PATH" && bun install) >&2
 
-# Print the absolute path to stdout (required by Claude Code)
+# Print the absolute path to stdout (required by the agent)
 echo "$WORKTREE_PATH"
