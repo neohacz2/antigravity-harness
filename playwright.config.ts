@@ -7,14 +7,15 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: [["html", { open: "never" }]],
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: "http://localhost:3002",
     trace: "on-first-retry",
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: "bun run dev",
-    url: "http://localhost:3000",
-    reuseExistingServer: !process.env.CI,
+    command: "bunx next dev -p 3002",
+    url: "http://localhost:3002",
+    reuseExistingServer: false,
     timeout: 120_000,
   },
 });
+
